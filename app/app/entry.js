@@ -11,5 +11,4 @@ angular.module('app',['ui.router','ngMaterial'])
 	.config(require('./routes.js'))
 
 
-	.directive('fileTree',require('./directives/tree.js'))
 

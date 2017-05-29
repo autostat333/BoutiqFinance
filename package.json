@@ -1,5 +1,5 @@
 {
-  "name": "boutiq-finance",
+  "name": "BoutiqFinance",
   "version": "1.0.0",
   "description": "Project application for SME",
   "main": "main.js",
@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "=1.17.2",
+    "electron": "=1.6.10",
+    "electron-packager": "=8.7.0",
+    "nedb": "=1.8.0",
+    "node-inspector": "=1.1.1"
+  }
 }

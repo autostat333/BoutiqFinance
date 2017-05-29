@@ -1,8 +1,11 @@
 #my adds
 /node_modules
+/app/node_modules
 #/bower_components
 /app/dist
+/app/app/dist
 /.sass-cache
+/app/.sass-cache
 
 
 
