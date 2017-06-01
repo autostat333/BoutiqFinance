@@ -5,14 +5,90 @@
 	position:relative;
 	overflow:hidden;
 
+	.icons_container
+		{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		z-index: 10;
+		height: 24px;
+		padding: 0px;
+		width: 83px;
+		//background: #444444;
+		background:white;
+		box-sizing: border-box;
+		//border-left:1px solid #5f5f5f;
+		display:flex;
+
+		md-icon
+			{
+			cursor:pointer;
+			margin-left:5px;
+			min-width:24px;
+			min-height:24px;
+			width:24px;
+			height:24px;
+			font-size:24px;
+			color:#5f5f5f;
+			//text-shadow:0px 1px 1px #777777;
+			text-shadow:0px 1px 1px white;
+			}
+
+		md-icon:hover
+			{
+			color:white;
+			background:#cccccc;
+			text-shadow:0px 1px 1px #cccccc;
+			}
+
+		md-icon:nth-child(4)
+			{
+			//color:#fb8d8d;
+			//text-shadow:0px 1px 1px #464646;
+			}
+
+
+		md-icon:nth-child(1)
+			{
+			margin-left:0px;
+			}
+
+		md-icon:nth-child(4):hover
+			{
+			background:red;
+			text-shadow:0px 1px 1px red;
+			color:white;
+			}
+
+
+
+
+
+		}
+
+
+
+	.dragable_bar
+		{
+		height:24px;
+		width:calc(100% - 83px);
+		position:absolute;
+		top:0px;
+		//border-bottom:1px solid #5f5f5f;
+		box-sizing:border-box;
+		-webkit-app-region:drag;
+		//background:#313131;
+		background:white;
+		}
+
 	.top_bar
 		{
+		top:24px;
 		width:100%;
 		background:black;
 		display:flex;
 		flex-direction:row;
 		height:50px;
-		border-top:2px solid #4a4a4a;
 		position:absolute;
 
 		md-icon
@@ -30,7 +106,7 @@
 			display:flex;
 			align-items: center;
 			justify-content: center;
-			border-right:1px solid red;
+			border-right:1px solid #fb8d8d;
 			}
 
 		.logo_container
@@ -164,10 +240,10 @@
 	.content
 		{
 		width:100%;
-		height:calc(100% - 50px);
+		height:calc(100% - 74px);
 		display:flex;
 		background:#f7f7f7;
-		margin-top:50px;
+		margin-top:74px;
 
 		.left_menu
 			{
@@ -189,13 +265,29 @@
 				list-style:none;
 				padding-left:20px;
 
+
+				.active
+					{
+					button
+						{
+						background:white;
+						color:black;
+						md-icon
+							{
+							color:black;
+							transform:scale(1);
+							}
+						}
+					}
+
+
 				button
 					{
 					width:200px;
 					text-align:left;
 					font-size:18px;
 					vertical-align:middle;
-
+					color:#c1c1c1;
 					md-icon
 						{
 						margin-right:15px;
@@ -203,7 +295,19 @@
 						width:30px;
 						font-size:28px;
 						vertical-align:middle;
-						color:#585858;
+						color:#c1c1c1;
+						transform:scale(0.7);
+						}
+					}
+
+				button:hover
+					{
+					background:white;
+					color:black;
+					md-icon
+						{
+						color:black;
+						transform:scale(1);
 						}
 					}
 				}
@@ -215,6 +319,7 @@
 			{
 			width:calc(100% - 250px);
 			height:100%;
+			overflow-y:scroll;
 			}
 
 		}

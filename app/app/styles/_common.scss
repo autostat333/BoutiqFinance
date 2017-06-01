@@ -42,16 +42,59 @@
   height:100%;
   min-width:900px;
   position:relative;
-
+  box-shadow:0px 1px 10px rgba(128, 128, 128, 0.76);
 
   }
+
+
+html,body
+  {
+  background:rgba(0,0,0,0);
+  }
+
+html
+  {
+  }
+
 
 body
   {
   overflow:hidden;
+  padding:5px !important;
+  box-sizing:border-box;
 
   @media(max-width:900px)
     {
     overflow-x:scroll;
     }
+  }
+
+
+
+.transitioned
+  {
+  transition:all ease;
+  transition-duration:0.7s;
+  }
+
+.transitioned.fast{transition-duration:0.5s;}
+.transitioned.very_fast{transition-duration:0.3s;}
+.transitioned.normal{transition-duration:0.7s;}
+.transitioned.slow{transition-duration:1s;}
+
+
+
+
+
+.widget
+  {
+  background:white;
+  padding:20px 15px 50px 15px;
+  box-sizing:border-box;
+  }
+
+
+md-icon
+  {
+  outline-width:0px;
   }

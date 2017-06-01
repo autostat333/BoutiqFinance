@@ -1,5 +1,14 @@
 <div class="main_controller">
 
+	<div class="icons_container">
+		<md-icon ng-click="minimize()" class="transitioned very_fast">vertical_align_bottom</md-icon>
+		<md-icon ng-show="!fullscreen" ng-click="fullscreen_switch(true)" class="transitioned very_fast">fullscreen</md-icon>
+		<md-icon ng-show="fullscreen" ng-click="fullscreen_switch(false)" class="transitioned very_fast">fullscreen_exit</md-icon>
+		<md-icon ng-click="close()" class="transitioned very_fast">clear</md-icon>
+	</div>
+
+	<div class="dragable_bar"></div>
+
 	<div class="top_bar md-whiteframe-3dp">
 
 		<div class="logo_container">
@@ -58,17 +67,17 @@
 	<div class="content">
 		<div class="left_menu md-whiteframe-2dp">
 			<ul>
-				<li><md-button><md-icon>shopping_cart</md-icon>Sales</md-button></li>
-				<li><md-button><md-icon>widgets</md-icon>Store</md-button></li>
-				<li><md-button><md-icon>multiline_chart</md-icon>Reports</md-button></li>
-				<li><md-button><md-icon>build</md-icon>Settings</md-button></li>
-				<li><md-button><md-icon>supervisor_account</md-icon>Workers</md-button></li>
+				<li ui-sref="main.sales" ui-sref-active="active"><md-button><md-icon class="transitioned fast">shopping_cart</md-icon><span class="transitioned fast">Sales</span></md-button></li>
+				<li ui-sref="main.store" ui-sref-active="active"><md-button><md-icon class="transitioned fast">widgets</md-icon><span class="transitioned fast">Store</span></md-button></li>
+				<li ui-sref="main.reports" ui-sref-active="active"><md-button><md-icon class="transitioned fast">multiline_chart</md-icon><span class="transitioned fast">Reports</span></md-button></li>
+				<li ui-sref="main.settings" ui-sref-active="active"><md-button><md-icon class="transitioned fast">build</md-icon><span class="transitioned fast">Settings</span></md-button></li>
+				<li ui-sref="main.workers" ui-sref-active="active"><md-button><md-icon class="transitioned fast">supervisor_account</md-icon><span class="transitioned fast">Workers</span></md-button></li>
 			</ul>
 		</div>
 
 
 		<div class="core_content">
-
+			<ui-view></ui-view>
 		</div>
 
 	</div>

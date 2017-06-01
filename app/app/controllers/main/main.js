@@ -9,12 +9,16 @@ module.exports = function Controllers($scope,$mdMenu,$filter,$timeout)
 	{
 
 
-	$scope.open_dropdown = open_dropdown;
+	$scope.open_dropdown = open_dropdown; //for login
+	$scope.minimize = minimize;
+	$scope.fullscreen_switch = fullscreen_switch;
+	$scope.close = close;
 	$scope.cur_dt = cur_dt;
 	$scope.init = init;
 
 
 	$scope.$on('$destroy',$scope.destroy_callback);
+
 
 	$scope.init();
 
@@ -24,6 +28,8 @@ module.exports = function Controllers($scope,$mdMenu,$filter,$timeout)
 		///determine current DATE obj and run every minute refreshing
 		$scope.CURRENT_DATE = {};
 		$scope.cur_dt();
+
+		$scope.fullscreen = false;
 
 		}
 
@@ -47,7 +53,6 @@ module.exports = function Controllers($scope,$mdMenu,$filter,$timeout)
 		$scope.CURRENT_DATE.time_str = parsed[1];
 		$scope.CURRENT_DATE.week_day_str = parsed[2];
 		$scope.CURRENT_DATE.day_str = parsed[3];
-		console.log('RABOTAET');
 		$scope.dater_callback = $timeout($scope.cur_dt,1000*30);
 		}
 
@@ -57,6 +62,29 @@ module.exports = function Controllers($scope,$mdMenu,$filter,$timeout)
 		{
 		mdMenu.open(e);
 		}
+
+
+	function minimize()
+		{
+		ipcRenderer.send('minimize');
+		}
+
+
+	function fullscreen_switch(param)
+		{
+		ipcRenderer.send(param?'fullscreen_in':'fullscreen_out');
+		$scope.fullscreen = param;
+		}
+
+
+
+	function close()
+		{
+		ipcRenderer.send('close');
+		}
+
+
+
 
 	}
 

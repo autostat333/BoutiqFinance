@@ -11,6 +11,15 @@
 	<link type="text/css" rel="stylesheet" href="./app/app/dist/compile.css">
 	<link type="text/css" rel="stylesheet" href="./app/app/dist/libs_styles.css">
 
+	<script>
+		ipcRenderer = require('electron').ipcRenderer;
+		window.require_ = require;
+		window.module_ = module;
+		delete require;
+		delete module;
+
+	</script>
+
 	<script src="./app/app/dist/libs_bundle.js" defer></script>
 	<script src="./app/app/dist/app_bundle.js" defer></script>
 

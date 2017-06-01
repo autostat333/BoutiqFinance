@@ -69,7 +69,8 @@ module.exports = function(grunt)
                 './app/directives/*.js',
                 './app/services/*.js',
                 './app/filters/*.js',
-                './app/factories/*.js'],
+                './app/models/*.js',
+                './app/factory/*.js'],
             dest:'./app/dist/app_bundle.js'
             }
           },
@@ -103,7 +104,8 @@ module.exports = function(grunt)
                   './app/directives/*.js',
                   './app/services/*.js',
                   './app/filters/*.js',
-                  './app/factories/*.js'],
+                  './app/models/*.js',
+                  './app/factory/*.js'],
               tasks:['browserify']
               },
             css:
