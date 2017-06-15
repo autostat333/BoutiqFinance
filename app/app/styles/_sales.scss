@@ -1,11 +1,8 @@
 .sales_container
   {
-  padding:30px 15px 50px 30px;
-
 
   .widget.table_list
     {
-    height:1000px;
     width:100%;
     }
 
@@ -38,32 +35,13 @@
 
   .table_container table
     {
-    width:600px;
-    thead tr th
-      {
-      border-bottom:1px solid gray;
-      }
-
-    th, td
-      {
-      text-align:center;
-      }
-
-    .th
-      {
-      display:inline-block;
-      width:30%;
-      text-align:center;
-      }
-
-    .td
+    //width:600px;
+    margin:0px 0px 0px 0px;
+    .td, .th
       {
       width:30%;
-      display:inline-block;
-      text-align:center;
       }
 
     }
-
 
   }

@@ -34,6 +34,7 @@ module.exports = function modelsFactory($q,$http)
 
     return function(model_type)
         {
+        var url = '../models/salesModel.js';
         return require('../models/salesModel.js').apply(null,args);
         };
 

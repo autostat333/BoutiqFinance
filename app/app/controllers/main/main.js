@@ -47,7 +47,7 @@ module.exports = function Controllers($scope,$mdMenu,$filter,$timeout)
 		var dt = new Date();
 		$scope.CURRENT_DATE.date = dt;
 
-		var parsed = $filter('date')(dt,'yyyy-MM-dd H:mm EEE d,MMM').split(' ');
+		var parsed = $filter('date')(dt,'yyyy-MM-dd`H:mm`EEE`d, MMM').split('`');
 
 		$scope.CURRENT_DATE.date_str = parsed[0];
 		$scope.CURRENT_DATE.time_str = parsed[1];

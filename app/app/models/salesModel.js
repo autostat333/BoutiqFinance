@@ -20,6 +20,7 @@ module.exports = function SalesModel($q,$http,send_http)
                 }
             for (var each in res)
                 {
+
                 sales.data.push(res[each]);
                 }
             });
@@ -72,6 +73,9 @@ module.exports = function SalesModel($q,$http,send_http)
                 }
             return true;
             }
+
+
+
 
 
 

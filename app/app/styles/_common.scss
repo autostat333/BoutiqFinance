@@ -84,17 +84,24 @@ body
 
 
 
-
-
-.widget
-  {
-  background:white;
-  padding:20px 15px 50px 15px;
-  box-sizing:border-box;
-  }
-
-
 md-icon
   {
   outline-width:0px;
   }
+
+
+
+//set colors
+$primary:#ae1558;  //most frequent color
+$dark_primary:#8a0a42;  //most frequent DARK color (rare)
+$light_primary:#ef4f95;  //most frequent LIGHT color
+
+$primary_text:#555; //for headers
+$secondary_text:#999; //for gray text
+$text:#555; //for plain text
+
+$devider:#eee;
+
+$accent:#03a9f4;  //for key parts in UI
+
+

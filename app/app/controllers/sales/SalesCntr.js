@@ -1,9 +1,10 @@
-module.exports = function SalesCntr($scope,$models)
+module.exports = function SalesCntr($scope,$models, $mdDialog)
     {
 
     $scope.submit = submit;
     $scope.init = init;
     $scope.init();
+
 
     function init()
         {
@@ -21,7 +22,6 @@ module.exports = function SalesCntr($scope,$models)
 
         if ($scope.sales_obj.isEmpty())return false;
 
-
         $scope.SALES.$add($scope.sales_obj).then(function()
             {
             $scope.sales_obj = $scope.SALES.$create_blank();
@@ -32,4 +32,4 @@ module.exports = function SalesCntr($scope,$models)
 
     }
 
-module.exports.$inject = ['$scope','$models'];
+module.exports.$inject = ['$scope','$models','$mdDialog'];
